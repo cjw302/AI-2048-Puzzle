@@ -13,15 +13,15 @@ class PlayerAI(BaseAI):
 		maxUtility = -np.inf
 		nextDir = -1
 
-		for move in moves:
-			child = getChild(grid, move)
-
-			utility = Decision(grid=child, max=False) 
-
-			if utility >= maxUtility:
-				maxUtility = utility
-				nextDir = move
-
+		#for move in moves:
+		#	child = getChild(grid, move)
+#	
+#			utility = Decision(grid=child, max=False) 
+#
+#			if utility >= maxUtility:
+#				maxUtility = utility
+#				nextDir = move
+		nextDir = random.choice(moves)
 		return nextDir
 
 
